@@ -53,10 +53,6 @@ const Overlay: React.FC = () => {
 
   return (
     <div className="Overlay">
-      <a onClick={toggleSettings} title={`${translated.settingsHint} (S)`}>
-        <Icon name="settings" />
-      </a>
-
       {errors.length > 0 ? (
         <a onClick={toggleErrors} title={translated.errorHint}>
           <Icon name="alert-triangle" />
@@ -86,6 +82,10 @@ const Overlay: React.FC = () => {
           <Icon name={isFullscreen ? "minimize-2" : "maximize-2"} />
         </a>
       ) : null}
+
+      <a onClick={toggleSettings} title={`${translated.settingsHint} (S)`}>
+        <Icon name="settings" />
+      </a>
     </div>
   );
 };
